@@ -1,0 +1,14 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+contract_manager_agree,contract.manager.agree,model_contract_agreement,group_contract_manager,1,1,1,1
+contract_manager_main,contract.manager.maint,model_contract_maintenance,group_contract_manager,1,1,1,1
+contract_manager_inst,contract.manager.inst,model_contract_installment,group_contract_manager,1,1,1,1
+contract_manager_alarm,contract.manager.alarm,model_alarm_system_line,group_contract_manager,1,1,1,1
+contract_manager_system,contract.manager.system,model_extinguishing_system_line,group_contract_manager,1,1,1,1
+contract_manager_system_type,contract.manager.system_type,model_system_type_value,group_contract_manager,1,1,1,1
+,,,,,,,
+contract_user_agree,contract.user.agree,model_contract_agreement,group_contract_user,1,0,0,0
+contract_user_main,contract.user.maint,model_contract_maintenance,group_contract_user,1,0,0,0
+contract_user_inst,contract.user.inst,model_contract_installment,group_contract_user,1,0,0,0
+contract_user_alarm,contract.user.alarm,model_alarm_system_line,group_contract_user,1,0,0,0
+contract_user_system,contract.user.system,model_extinguishing_system_line,group_contract_user,1,0,0,0
+contract_user_system_type,contract.user.system_type,model_system_type_value,group_contract_user,1,0,0,0

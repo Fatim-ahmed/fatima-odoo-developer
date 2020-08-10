@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+
+        <record id="seq_visit_management" model="ir.sequence">
+            <field name="name">Visit Management</field>
+            <field name="code">visit.management</field>
+            <field name="prefix"/>
+            <field name="padding">1</field>
+        </record>
+        <record id="seq_maintenance_management" model="ir.sequence">
+            <field name="name">Maintenance Management</field>
+            <field name="code">maintenance.management</field>
+            <field name="prefix"/>
+            <field name="padding">1</field>
+        </record>
+          <record id="seq_raise_complaints" model="ir.sequence">
+            <field name="name">Raise Complaints Management</field>
+            <field name="code">raise.complaints</field>
+            <field name="prefix"/>
+            <field name="padding">1</field>
+        </record>
+    </data>
+</odoo>

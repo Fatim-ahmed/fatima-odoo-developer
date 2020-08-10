@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--        <record id="hr_equipment_view_calendar" model="ir.ui.view">-->
+        <!--            <field name="name">equipment.request.calendar</field>-->
+        <!--            <field name="model">maintenance.request</field>-->
+        <!--            <field name="arch" type="xml">-->
+        <!--                <calendar date_start="schedule_date" date_delay="duration" color="user_id" event_limit="5">-->
+        <!--                    <field name="user_id"/>-->
+        <!--                    <field name="priority"/>-->
+        <!--                    <field name="maintenance_type"/>-->
+        <!--                </calendar>-->
+        <!--            </field>-->
+        <!--        </record>-->
+        <record id="visit_management_view_form" model="ir.ui.view">
+            <field name="name">visit.management.form</field>
+            <field name="model">visit.management</field>
+            <field name="arch" type="xml">
+                <form string="Visit Management" create="false">
+                    <header>
+                        <button string="In Progress" states="draft" name="action_progress" type="object"/>
+                        <button string="Done" states="progress" name="action_done" type="object"/>
+                        <button string="Set To Draft" states="delay" groups="visit_management_module.group_visit_manager_custom" name="set_to_draft" type="object"/>
+                        <button string="Maintenance Request" attrs="{'invisible':[('status','=','work')]}" name="create_maintenance_request" type="object"/>
+                        <button string="Raise Complaint" states="progress" name="action_raise_complaints" type="object"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,progress,done"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <label for="num"/>
+                                <field placeholder="" attrs="{'required':False,'readonly':True}" name="num" class="oe_inline"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="is_additional" invisible="1"/>
+                                <field name="contract_id" required="1" attrs="{'readonly':['|',('state','!=','draft'),('is_additional','=',False)]}"/>
+                                <field name="customer" required="1" attrs="{'readonly':['|',('state','!=','draft'),('is_additional','=',False)]}"/>
+                            </group>
+                            <group>
+                                <field name="date" required="1" attrs="{'readonly':['|',('state','!=','draft'),('is_additional','=',False)]}"/>
+                                <field name="responsible" required="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+                            </group>
+                        </group>
+                        <separator/>
+                        <separator/>
+                        <notebook>
+                            <page string="Alarm System">
+                                <field name="alarm_line_ids" attrs="{'readonly':[('state','not in',['draft','progress'])]}">
+                                    <tree string="Alarm System" editable="bottom">
+                                        <field name="name" optional="show"/>
+                                        <field name="is_available" string ="Is Work" optional="show"/>
+                                        <field name="not_available" string="Is not work" optional="show"/>
+                                        <field name="count" optional="show"/>
+                                        <field name="note" optional="show"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Extinguishing System">
+                                <field name="extinguishing_line_ids" attrs="{'readonly':[('state','not in',['draft','progress'])]}">
+                                    <tree string="Alarm System" editable="bottom">
+                                        <field name="name" optional="show"/>
+                                        <field name="is_available" string ="Is Work" optional="show"/>
+                                        <field name="not_available" string="Is not work" optional="show"/>
+                                        <field name="count" optional="show"/>
+                                        <field name="note" optional="show"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Other Information">
+                                <group>
+                                    <field name="note"/>
+                                </group>
+                                <group>
+                                    <group>
+                                        <field name="status" widget="radio" attrs="{'readonly':[('state','!=','progress')]}"/>
+                                        <field name="receiver_person" attrs="{'readonly':[('state','!=','progress')]}"/>
+                                    </group>
+                                    <group>
+                                        <field name="signature" widget="signature" attrs="{'readonly':[('state','!=','progress')]}"/>
+                                    </group>
+
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <!--                    <field name="activity_ids" widget="mail_activity"/>-->
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="visit_management_view_tree" model="ir.ui.view">
+            <field name="name">visit.tree</field>
+            <field name="model">visit.management</field>
+            <field name="arch" type="xml">
+                <tree string="Visit Management" create="false" decoration-info="state == 'progress'" decoration-it="state == 'draft'" decoration-success= "state == 'done'" decoration-danger="state == 'delay'" >
+                    <field name="customer"/>
+                    <field name="contract_id"/>
+                    <field name="date"/>
+                    <field name="status"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+        <record id="additional_visit_management_view_tree" model="ir.ui.view">
+            <field name="model">visit.management</field>
+            <field name="inherit_id" ref="visit_management_module.visit_management_view_tree"/>
+            <field name="mode">primary</field>
+            <field name="arch" type="xml">
+                <xpath expr="//tree" position="attributes">
+                    <attribute name="create">true</attribute>
+                </xpath>
+            </field>
+        </record>
+        <!-- visit : actions -->
+        <record id="visit_action" model="ir.actions.act_window">
+            <field name="name">Visit</field>
+            <field name="res_model">visit.management</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="visit_management_view_tree"/>
+            <field name="domain">[('is_additional', '=', False)]</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Add a new visit
+                </p>
+            </field>
+        </record>
+
+        <record id="additional_visit_action" model="ir.actions.act_window">
+            <field name="name">Additional Visit</field>
+            <field name="res_model">visit.management</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="additional_visit_management_view_tree"/>
+            <field name="domain">[('is_additional', '=', True)]</field>
+            <field name="context">{'default_is_additional': True}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Add a new Additional visit
+                </p>
+            </field>
+        </record>
+
+        <!-- Menu items hierachy -->
+        <menuitem
+                id="menu_visit_parent_custom"
+                name="Visits Management"
+                sequence="110"/>
+        <menuitem
+                id="menu_visit_sub_parent_custom"
+                parent="menu_visit_parent_custom"
+                name="Visits Management"
+                sequence="110"/>
+        <menuitem
+                id="menu_visit_custom"
+                name="Visit"
+                parent="menu_visit_sub_parent_custom"
+                action="visit_action"
+                sequence="0"/>
+        <menuitem
+                id="menu_additional_visit_custom"
+                name="Additional Visit"
+                parent="menu_visit_sub_parent_custom"
+                action="additional_visit_action"
+                sequence="0"/>
+    </data>
+</odoo>

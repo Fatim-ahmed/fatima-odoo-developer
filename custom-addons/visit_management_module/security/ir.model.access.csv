@@ -1,0 +1,12 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+visit_manager_agree,visit.manager.agree,model_visit_management,group_visit_manager_custom,1,1,1,1
+visit_manager_main,visit.manager.maint,model_maintenance_management,group_visit_manager_custom,1,1,1,1
+visit_manager_alarm,visit.manager.alarm,custom_contract.model_alarm_system_line,group_visit_manager_custom,1,1,1,1
+visit_manager_system,visit.manager.system,custom_contract.model_extinguishing_system_line,group_visit_manager_custom,1,1,1,1
+visit_manager_complaints,visit.manager.complaints,model_raise_complaints,group_visit_manager_custom,1,1,1,1
+,,,,,,,
+visit_user_agree,contract.user.agree,model_visit_management,group_visit_user_custom,1,0,0,0
+visit_user_main,contract.user.maint,model_maintenance_management,group_visit_user_custom,1,0,0,0
+visit_user_alarm,contract.user.alarm,custom_contract.model_alarm_system_line,group_visit_user_custom,1,0,0,0
+visit_user_system,contract.user.system,custom_contract.model_extinguishing_system_line,group_visit_user_custom,1,0,0,0
+visit_user_complaints,visit.user.complaints,model_raise_complaints,group_visit_user_custom,1,0,0,0

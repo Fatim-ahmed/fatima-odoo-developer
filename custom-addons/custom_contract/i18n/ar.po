@@ -1,0 +1,1040 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* custom_contract
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-07-15 20:42+0000\n"
+"PO-Revision-Date: 2020-07-15 20:42+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: custom_contract
+#: model:ir.actions.report,print_report_name:custom_contract.report_agreement_contract_report_temp
+#: model:ir.actions.report,print_report_name:custom_contract.report_maintenance_contract_report_temp
+msgid "'Contract Name- %s' % (object.name)"
+msgstr ""
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.maintenance_contract_report_temp
+msgid ""
+")\n"
+"                                وكذلك نظام الانذار الخاص بالحريق والذي يشمل ("
+msgstr ""
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.agreement_contract_report_temp
+msgid ") ريال يتم دفعها على حسب الطريق التالية:"
+msgstr ""
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.maintenance_contract_report_temp
+msgid ""
+") من نسختين واستلم كلاً من الطرفين النسخة الخاصة به من هذا العقد .\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                السابع عشر : قيمة هذا العقد الاجمالية لمدة سنة هجرية هو مبلغ ("
+msgstr ""
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.maintenance_contract_report_temp
+msgid ""
+") وجميع الانظمة الخاصة بهذا النظام والمتطلبات الخاصة بتشغيل النظام والتأكد من جاهزية جميع ما ورد\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                <strong>ثالثاً :  </strong>\n"
+"                                يلتزم الطرف الأول بعمل جدول زيارات دورية على أن لا يقل عن ( 12 ) زيارة في السنة الواحدة بمعدل زيارة شهرياً وتسجيل نتائج الزيارة في سجل السلامة الخاص بالمنشأة وارفاق تقارير الصيانة بالسجل وتزويد الطرف الثاني بالتقرير .\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                <strong>رابعاً :</strong>\n"
+"                                يلتزم الطرف الأول بالحضور أو من ينوب عنه من الفنيين في حالة حدوث عطل مفاجئ ولا تعتبر تلك زيارة وتسجل في سجل السلامة الخاص بالمنشأة .\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                <strong> خامساً : </strong>\n"
+"                                على الطرف الأول والثاني اشعار الدفاع المدني رسمياً بأي خلل يؤثر على استمرارية عمل تلك الانظمة ويؤثر على سلامة الارواح والممتلكات بالمنشأة .\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                <strong>سادساً : </strong>\n"
+"                                يجب على الطرف الذي يرغب بفسخ العقد اشعار الدفاع المدني رسمياً والطرف الاخر برغبته بفسخ العقد قبل شهر من الانتهاء مبدياً اسباب ذلك , وعلى الطرف الثاني احضار عقد صيانة جديد قبل 10 أيام من نهاية العقد السابق وتقديمه للدفاع المدني على أن يبدأ العقد الجديد مع نهاية العقد السابق .\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                <strong>سابعاً :</strong>\n"
+"                                يعتبر العقد ساري المفعول في حالة انتهاء مدته مالم يتعارض مع الفقرة السابقة ملزم للطرفين .\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                ثامناً : يلتزم الطرف الثاني بتأمين ما يلزم من قطع الغيار اللازمة للإصلاح فور طلبها منه وعلى الطرف الاول اشعار الدفاع المدني كتابياً عند عدم تأمينها خلال 48 ساعة من تاريخ ابلاغ الطرف الثاني .\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                تاسعاً : يلتزم الطرف الثاني بتعبئة طفايات الحريق ونظام الاطفاء بالغازات بعد اعداد تقرير من قبل الطرف الاول بضرورة تعبئتها او استبدالها او الاتفاق مع الطرف الاول على تعبئتها وعلى الطرف الاول اشعار الدفع المدني كتابياً عند عدم تأمينها خلال 48 ساعة من تاريخ ابلاغ الطرف الثاني .\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                عاشراً : في حالة تأخر الطرف الاول عن الصيانة على الطرف الثاني اشعار الدفاع المدني بذلك .\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                الحادي عشر : يلتزم الطرف الثاني بالمحافظة على جميع الانظمة وعدم السماح بالعبث بها .\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                الثاني عشر : بمجرد التوقيع على هذا العقد يعتبر الطرف الاول مسئولاً عن صيانة معدات الانذار والاطفاء بجميع الانظمة الواردة في الفقرةثانياً , وأي خلل أو عيب فيها تكون تحت مسئوليته .\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                الثالث عشر : على الطرف الاول اتخاذ احتياطات الامن والسلامة اثناء العمل .\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                الرابع عشر : يلتزم الطرف الاول بإحضار اجهزة الرفع أو النقل التي تتطلبها أعمال الصيانة .\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                الخامس عشر : على الطرف الاول الالتزام بقوانين وانظمة المملكة العربية السعودية .\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                السادس عشر : حرر هذا العقد بتاريخ ("
+msgstr ""
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.maintenance_contract_report_temp
+msgid "- رقم السجل التجاري -"
+msgstr ""
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.maintenance_contract_report_temp
+msgid "- رقم الهوية -"
+msgstr ""
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.maintenance_contract_report_temp
+msgid "- طريق -"
+msgstr ""
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.maintenance_contract_report_temp
+msgid "- هاتف -"
+msgstr ""
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.maintenance_contract_report_temp
+msgid "- و يمثلها في هذا العقد السيد /"
+msgstr ""
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.maintenance_contract_report_temp
+msgid ""
+".\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                لما كان الطرف الثاني يرغب في إجراء عملية صيانة انظمة الحماية والانذار من الحريق وملحقاتها وما ابداه الطرف الاول من توفر الامكانيات من خلال مهندسين وفنيين اكفاء ومختصين في هذا المجال وذلك حسب الاصول الفنية المعتمد لذلك فقد تم الاتفاق بالتراضي بين الطرفين وهما بكامل الاهلية المعتبرة شرعاً للتعاقد حسب التالي :\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                <strong>أولاً :  </strong>\n"
+"                                يعتبر التمهيد السابق جزء لا يتجزأ من هذا العقد .\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                <strong>ثانياً :  </strong>\n"
+"                                والتزام الطرف الاول بعمل الصيانة والكشف الدوري لنظام الحريق والذي يشمل ("
+msgstr ""
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.maintenance_contract_report_temp
+msgid ""
+".\n"
+"                                <br/>\n"
+"                                <strong> الطرف الثاني : </strong>\n"
+"                                <br/>\n"
+"                                مؤسسه"
+msgstr ""
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.agreement_contract_report_temp
+msgid ""
+"<br/>\n"
+"                                <br/>\n"
+"                                <strong> الطرف الثاني : </strong>"
+msgstr ""
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.agreement_contract_report_temp
+msgid ""
+"<br/>\n"
+"                                <br/>\n"
+"                                <strong>هذا وقد  اتفق الطرفان وهما بكامل الأوصاف المعتبرة شرعا ونظاما على إبرام هذا العقد وذلك وفقا للأحكام والشروط التالية :</strong>"
+msgstr ""
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.maintenance_contract_report_temp
+msgid ""
+"<br/>\n"
+"                            <br/>\n"
+"                            <br/>\n"
+"                            <strong>1) نظام الانذار\n"
+"                            </strong>"
+msgstr ""
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.maintenance_contract_report_temp
+msgid ""
+"<br/>\n"
+"                            <br/>\n"
+"                            <strong>1) نظام الإطفاء\n"
+"                            </strong>"
+msgstr ""
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.extend_partner_view_form
+msgid "<span class=\"o_stat_text\">Agreement Contract</span>"
+msgstr "عقد الاتفاق"
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.extend_partner_view_form
+msgid "<span class=\"o_stat_text\">Maintenance Contract</span>"
+msgstr "عقد الصيانه"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_agreement__message_needaction
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: custom_contract
+#: model_terms:ir.actions.act_window,help:custom_contract.maintenance_contract_action
+msgid "Add a new Maintenance Contract"
+msgstr "اضافة عقد صيانه جديد"
+
+#. module: custom_contract
+#: model_terms:ir.actions.act_window,help:custom_contract.agreement_contract_action
+msgid "Add a new agreement Contract"
+msgstr "اضافة عقد اتفاق جديد"
+
+#. module: custom_contract
+#: model:ir.actions.act_window,name:custom_contract.agreement_contract_action
+#: model:ir.ui.menu,name:custom_contract.menu_contract_agreement_custom
+msgid "Agreement Contract"
+msgstr "عقود الاتفاق"
+
+#. module: custom_contract
+#: model:ir.actions.report,name:custom_contract.report_agreement_contract_report_temp
+msgid "Agreement Contract Report"
+msgstr "طباعة عقد الاتفاق"
+
+#. module: custom_contract
+#: model:ir.model,name:custom_contract.model_contract_agreement
+#: model_terms:ir.ui.view,arch_db:custom_contract.agreement_contract_view_tree
+msgid "Agreement contract"
+msgstr "عقد الاتفاق"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__air_fans_push_emergency_ladder
+msgid "Air fans push emergency ladders"
+msgstr "مراوح دفع الهواء بسلالم الطوارئ"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__alarm_line_ids
+#: model_terms:ir.ui.view,arch_db:custom_contract.contract_maintenance_view_form
+msgid "Alarm System"
+msgstr "نظام الانذار"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_common_contract__contract_amount
+#: model:ir.model.fields,field_description:custom_contract.field_contract_agreement__contract_amount
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__contract_amount
+msgid "Amount"
+msgstr "قيمة العقد"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_installment__amount
+msgid "Amount"
+msgstr "قيمة الدفعه"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_agreement__message_attachment_count
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__audio_visual_alarms
+msgid "Audio and visual alarms"
+msgstr "اجهزة التنبيه السمعية والمرئية"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__generator
+msgid "Backup electrical source (generator)"
+msgstr "المصدر الكهربائي الاحتياطي(المولد)"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__basement_suction_fans
+msgid "Basement and suction fans"
+msgstr "مراوح شفط ودفع الهواء بالبدروم"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__call_points_hand
+msgid "Call points Hand"
+msgstr "نقاط النداء اليدوية"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_common_contract__first_party_com_register
+#: model:ir.model.fields,field_description:custom_contract.field_common_contract__second_party_com_register
+#: model:ir.model.fields,field_description:custom_contract.field_contract_agreement__first_party_com_register
+#: model:ir.model.fields,field_description:custom_contract.field_contract_agreement__second_party_com_register
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__first_party_com_register
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__second_party_com_register
+#: model:ir.model.fields,field_description:custom_contract.field_res_partner__commercial_register
+#: model:ir.model.fields,field_description:custom_contract.field_res_users__commercial_register
+msgid "Commercial Register"
+msgstr "السجل التجاري"
+
+#. module: custom_contract
+#: model:ir.model,name:custom_contract.model_res_partner
+msgid "Contact"
+msgstr "جهة الاتصال"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_alarm_system_line__contract_id
+#: model:ir.model.fields,field_description:custom_contract.field_contract_installment__contract_id
+#: model:ir.model.fields,field_description:custom_contract.field_extinguishing_system_line__contract_id
+#: model:ir.ui.menu,name:custom_contract.menu_contract_parent_custom
+msgid "Contract"
+msgstr "العقود"
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.contract_agreement_view_form
+msgid "Contract Agreement"
+msgstr "عقود الاتفاق"
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.contract_maintenance_view_form
+msgid "Contract Maintenance"
+msgstr "عقود الصيانه"
+
+#. module: custom_contract
+#: model:ir.module.category,name:custom_contract.contract_custom
+msgid "Contract Management"
+msgstr "إدارة العقود"
+
+#. module: custom_contract
+#: model:res.groups,name:custom_contract.group_contract_manager
+msgid "Contract Manager"
+msgstr "مدير العقود"
+
+#. module: custom_contract
+#: model:res.groups,name:custom_contract.group_contract_user
+msgid "Contract User"
+msgstr "مستخدم العقود"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_alarm_system_line__count
+#: model:ir.model.fields,field_description:custom_contract.field_extinguishing_system_line__count
+msgid "Count"
+msgstr "العدد"
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.contract_agreement_view_form
+msgid "Create Maintenance Contract"
+msgstr "انشاء عقد صيانه"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_alarm_system_line__create_uid
+#: model:ir.model.fields,field_description:custom_contract.field_common_contract__create_uid
+#: model:ir.model.fields,field_description:custom_contract.field_contract_agreement__create_uid
+#: model:ir.model.fields,field_description:custom_contract.field_contract_installment__create_uid
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__create_uid
+#: model:ir.model.fields,field_description:custom_contract.field_extinguishing_system_line__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_alarm_system_line__create_date
+#: model:ir.model.fields,field_description:custom_contract.field_common_contract__create_date
+#: model:ir.model.fields,field_description:custom_contract.field_contract_agreement__create_date
+#: model:ir.model.fields,field_description:custom_contract.field_contract_installment__create_date
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__create_date
+#: model:ir.model.fields,field_description:custom_contract.field_extinguishing_system_line__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_agreement__currency_id
+msgid "Currency"
+msgstr "العمله"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_common_contract__date
+#: model:ir.model.fields,field_description:custom_contract.field_contract_agreement__date
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_installment__description
+msgid "Description"
+msgstr "الوصف"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_alarm_system_line__display_name
+#: model:ir.model.fields,field_description:custom_contract.field_common_contract__display_name
+#: model:ir.model.fields,field_description:custom_contract.field_contract_agreement__display_name
+#: model:ir.model.fields,field_description:custom_contract.field_contract_installment__display_name
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__display_name
+#: model:ir.model.fields,field_description:custom_contract.field_extinguishing_system_line__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: custom_contract
+#: model:ir.model.fields.selection,name:custom_contract.selection__common_contract__state__done
+#: model:ir.model.fields.selection,name:custom_contract.selection__contract_agreement__state__done
+#: model:ir.model.fields.selection,name:custom_contract.selection__contract_maintenance__state__done
+msgid "Done"
+msgstr "تم"
+
+#. module: custom_contract
+#: model:ir.model.fields.selection,name:custom_contract.selection__common_contract__state__draft
+#: model:ir.model.fields.selection,name:custom_contract.selection__contract_agreement__state__draft
+#: model:ir.model.fields.selection,name:custom_contract.selection__contract_maintenance__state__draft
+msgid "Draft"
+msgstr "مسوده"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_agreement__duration
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__duration
+msgid "Duration"
+msgstr "المده"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__electrical_wiring_network
+msgid "Electrical wiring network"
+msgstr "شبكة التمديدات الكهربائية"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__emergency_lighting
+msgid "Emergency lighting"
+msgstr "انارة الطوارئ"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__end_date
+msgid "End Date"
+msgstr "تاريخ نهاية العقد"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__eq_co_con_fire_protect_sys
+msgid "Equipment, cocks, and connections for fire protection systems"
+msgstr "المعدات والمحابس والتوصيلات الخاصة بنظم الحماية من الحريق"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_common_contract__first_party_executive_manager
+#: model:ir.model.fields,field_description:custom_contract.field_common_contract__second_party_executive_manager
+#: model:ir.model.fields,field_description:custom_contract.field_contract_agreement__first_party_executive_manager
+#: model:ir.model.fields,field_description:custom_contract.field_contract_agreement__second_party_executive_manager
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__first_party_executive_manager
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__second_party_executive_manager
+#: model:ir.model.fields,field_description:custom_contract.field_res_partner__executive_manager
+#: model:ir.model.fields,field_description:custom_contract.field_res_users__executive_manager
+msgid "Executive Manager"
+msgstr "ممثل الجهة في العقد"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__extinguishing_line_ids
+#: model_terms:ir.ui.view,arch_db:custom_contract.contract_maintenance_view_form
+msgid "Extinguishing System"
+msgstr "نظام الحريق"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__fire_chokes
+msgid "Fire Chokes"
+msgstr "خوانق الحريق"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__fire_boxes
+msgid "Fire boxes"
+msgstr "صناديق الحريق"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__fire_detectors
+msgid "Fire detectors"
+msgstr "كاشفات الحريق"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__fire_extinguishers
+msgid "Fire extinguishers"
+msgstr "طفايات الحريق"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__fire_pump_board
+msgid "Fire pump board"
+msgstr "اللوحة الخاصة بمضخة الحريق"
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.contract_agreement_view_form
+#: model_terms:ir.ui.view,arch_db:custom_contract.contract_maintenance_view_form
+msgid "First Party Information"
+msgstr "معلومات الطرف الاول"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_common_contract__first_party
+#: model:ir.model.fields,field_description:custom_contract.field_contract_agreement__first_party
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__first_party
+msgid "First party"
+msgstr "الطرف الاول"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__fixed_automatic_systems
+msgid "Fixed automatic systems"
+msgstr "الانظمة التلقائية الثابتة"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_agreement__message_follower_ids
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_agreement__message_channel_ids
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_agreement__message_partner_ids
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_alarm_system_line__id
+#: model:ir.model.fields,field_description:custom_contract.field_common_contract__id
+#: model:ir.model.fields,field_description:custom_contract.field_contract_agreement__id
+#: model:ir.model.fields,field_description:custom_contract.field_contract_installment__id
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__id
+#: model:ir.model.fields,field_description:custom_contract.field_extinguishing_system_line__id
+msgid "ID"
+msgstr ""
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_common_contract__first_party_exec_mag_id
+#: model:ir.model.fields,field_description:custom_contract.field_common_contract__second_party_exec_mag_id
+#: model:ir.model.fields,field_description:custom_contract.field_contract_agreement__first_party_exec_mag_id
+#: model:ir.model.fields,field_description:custom_contract.field_contract_agreement__second_party_exec_mag_id
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__first_party_exec_mag_id
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__second_party_exec_mag_id
+#: model:ir.model.fields,field_description:custom_contract.field_res_partner__exec_mag_id
+#: model:ir.model.fields,field_description:custom_contract.field_res_users__exec_mag_id
+msgid "Identifier"
+msgstr "رقم هوية ممثل الجهة في العقد"
+
+#. module: custom_contract
+#: model:ir.model.fields,help:custom_contract.field_contract_agreement__message_needaction
+#: model:ir.model.fields,help:custom_contract.field_contract_agreement__message_unread
+#: model:ir.model.fields,help:custom_contract.field_contract_maintenance__message_needaction
+#: model:ir.model.fields,help:custom_contract.field_contract_maintenance__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: custom_contract
+#: model:ir.model.fields,help:custom_contract.field_contract_agreement__message_has_error
+#: model:ir.model.fields,help:custom_contract.field_contract_agreement__message_has_sms_error
+#: model:ir.model.fields,help:custom_contract.field_contract_maintenance__message_has_error
+#: model:ir.model.fields,help:custom_contract.field_contract_maintenance__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_agreement__installment_ids
+#: model_terms:ir.ui.view,arch_db:custom_contract.contract_agreement_view_form
+msgid "Installments"
+msgstr "الدفعيات"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__internal_external_fire_socket_systems
+msgid "Internal and external fire socket systems"
+msgstr "أنظمة مأخذ الحريق الداخلية والخارجية"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_alarm_system_line__is_available
+#: model:ir.model.fields,field_description:custom_contract.field_extinguishing_system_line__is_available
+msgid "Is Available ?"
+msgstr "موجود"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_agreement__message_is_follower
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_alarm_system_line__not_available
+#: model:ir.model.fields,field_description:custom_contract.field_extinguishing_system_line__not_available
+msgid "Is Not Available ?"
+msgstr "غير موجود"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_alarm_system_line____last_update
+#: model:ir.model.fields,field_description:custom_contract.field_common_contract____last_update
+#: model:ir.model.fields,field_description:custom_contract.field_contract_agreement____last_update
+#: model:ir.model.fields,field_description:custom_contract.field_contract_installment____last_update
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance____last_update
+#: model:ir.model.fields,field_description:custom_contract.field_extinguishing_system_line____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_alarm_system_line__write_uid
+#: model:ir.model.fields,field_description:custom_contract.field_common_contract__write_uid
+#: model:ir.model.fields,field_description:custom_contract.field_contract_agreement__write_uid
+#: model:ir.model.fields,field_description:custom_contract.field_contract_installment__write_uid
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__write_uid
+#: model:ir.model.fields,field_description:custom_contract.field_extinguishing_system_line__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_alarm_system_line__write_date
+#: model:ir.model.fields,field_description:custom_contract.field_common_contract__write_date
+#: model:ir.model.fields,field_description:custom_contract.field_contract_agreement__write_date
+#: model:ir.model.fields,field_description:custom_contract.field_contract_installment__write_date
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__write_date
+#: model:ir.model.fields,field_description:custom_contract.field_extinguishing_system_line__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_agreement__message_main_attachment_id
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__main_alarm_panel
+msgid "Main alarm panel"
+msgstr "لوحة الانذار الرئيسية"
+
+#. module: custom_contract
+#: model:ir.actions.act_window,name:custom_contract.maintenance_contract_action
+#: model:ir.ui.menu,name:custom_contract.menu_contract_maintenance_custom
+msgid "Maintenance Contract"
+msgstr "عقود الصيانه"
+
+#. module: custom_contract
+#: model:ir.actions.report,name:custom_contract.report_maintenance_contract_report_temp
+msgid "Maintenance Contract Report"
+msgstr "طباعة عقد الصيانه"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_agreement__message_has_error
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_agreement__message_ids
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_alarm_system_line__name
+#: model:ir.model.fields,field_description:custom_contract.field_common_contract__name
+#: model:ir.model.fields,field_description:custom_contract.field_contract_agreement__name
+#: model:ir.model.fields,field_description:custom_contract.field_contract_installment__name
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__name
+#: model:ir.model.fields,field_description:custom_contract.field_extinguishing_system_line__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_alarm_system_line__note
+#: model:ir.model.fields,field_description:custom_contract.field_extinguishing_system_line__note
+msgid "Note"
+msgstr "الملاحظات"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__visit_numb
+msgid "Number Of Visit"
+msgstr "عدد الزيارات"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_agreement__message_needaction_counter
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_agreement__message_has_error_counter
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: custom_contract
+#: model:ir.model.fields,help:custom_contract.field_contract_agreement__message_needaction_counter
+#: model:ir.model.fields,help:custom_contract.field_contract_maintenance__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: custom_contract
+#: model:ir.model.fields,help:custom_contract.field_contract_agreement__message_has_error_counter
+#: model:ir.model.fields,help:custom_contract.field_contract_maintenance__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: custom_contract
+#: model:ir.model.fields,help:custom_contract.field_contract_agreement__message_unread_counter
+#: model:ir.model.fields,help:custom_contract.field_contract_maintenance__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.contract_agreement_view_form
+msgid "Order Information"
+msgstr "معلومات عرض السعر"
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.contract_agreement_view_form
+msgid "Order Line"
+msgstr "عرض السعر"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_agreement__line_ids
+msgid "Order Lines"
+msgstr "عرض السعر"
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.contract_agreement_view_form
+msgid "Order lines"
+msgstr "عرض السعر"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_agreement__note
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__note
+msgid "Other Condition"
+msgstr "الشروط الاخري"
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.contract_agreement_view_form
+msgid "Other Information"
+msgstr "المعلومات الاخري"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__panel_help_signals
+msgid "Panel help signals"
+msgstr "لوحة الاشارات المساعدة"
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.contract_agreement_view_form
+#: model_terms:ir.ui.view,arch_db:custom_contract.contract_maintenance_view_form
+msgid "Party Information"
+msgstr "معلومات الشركاء"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_common_contract__first_party_phone
+#: model:ir.model.fields,field_description:custom_contract.field_common_contract__second_party_phone
+#: model:ir.model.fields,field_description:custom_contract.field_contract_agreement__first_party_phone
+#: model:ir.model.fields,field_description:custom_contract.field_contract_agreement__second_party_phone
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__first_party_phone
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__second_party_phone
+msgid "Phone"
+msgstr "رقم الهاتف"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__pumps
+msgid "Pumps"
+msgstr "المضخات"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_agreement__message_has_sms_error
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_agreement__order_id
+msgid "Sale Order"
+msgstr "عرض السعر"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_common_contract__second_party
+#: model:ir.model.fields,field_description:custom_contract.field_contract_agreement__second_party
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__second_party
+msgid "Second Party"
+msgstr "الطرف الثاني"
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.contract_agreement_view_form
+#: model_terms:ir.ui.view,arch_db:custom_contract.contract_maintenance_view_form
+msgid "Second Party Information"
+msgstr "معلومات الطرف الثاني"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_common_contract__num
+#: model:ir.model.fields,field_description:custom_contract.field_contract_agreement__num
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__num
+msgid "Sequence"
+msgstr "التسلسل"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__sign_board
+msgid "Sign board"
+msgstr "لوحة الاشارات"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__signal_lamps_help
+msgid "Signal lamps help"
+msgstr "مصابيح الاشارة المساعدة"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_common_contract__state
+#: model:ir.model.fields,field_description:custom_contract.field_contract_agreement__state
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__state
+msgid "State"
+msgstr "الحاله"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_agreement__amount_tax
+msgid "Taxes"
+msgstr "قيمة الضريبة المضافه"
+
+#. module: custom_contract
+#: model:res.groups,comment:custom_contract.group_contract_manager
+#: model:res.groups,comment:custom_contract.group_contract_user
+msgid "The user will be able to manage contract."
+msgstr ""
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_agreement__amount_total
+msgid "Total"
+msgstr "اجمالي التكلفة"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_res_partner__total_agreement
+#: model:ir.model.fields,field_description:custom_contract.field_res_users__total_agreement
+msgid "Total Agreement Contract"
+msgstr "مجموع عقود الاتفاق"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_res_partner__total_main
+#: model:ir.model.fields,field_description:custom_contract.field_res_users__total_main
+msgid "Total Maintenance Contract"
+msgstr "مجموع عقود الصيانه"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_agreement__message_unread
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_agreement__message_unread_counter
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_agreement__amount_untaxed
+msgid "Untaxed Amount"
+msgstr "الاجمـــــــــــــــــــــــــــــــــــالي "
+
+#. module: custom_contract
+#: model:ir.module.category,description:custom_contract.contract_custom
+msgid "User access level for Contract module"
+msgstr ""
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_contract_agreement__website_message_ids
+#: model:ir.model.fields,field_description:custom_contract.field_contract_maintenance__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: custom_contract
+#: model:ir.model.fields,help:custom_contract.field_contract_agreement__website_message_ids
+#: model:ir.model.fields,help:custom_contract.field_contract_maintenance__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: custom_contract
+#: model:ir.model,name:custom_contract.model_alarm_system_line
+msgid "alarm.system.line"
+msgstr ""
+
+#. module: custom_contract
+#: model:ir.model,name:custom_contract.model_common_contract
+msgid "common filed between contract type"
+msgstr ""
+
+#. module: custom_contract
+#: model:ir.model,name:custom_contract.model_contract_installment
+msgid "contract.installment"
+msgstr ""
+
+#. module: custom_contract
+#: model:ir.model,name:custom_contract.model_extinguishing_system_line
+msgid "extinguishing.system.line"
+msgstr ""
+
+#. module: custom_contract
+#: model:ir.model,name:custom_contract.model_contract_maintenance
+#: model_terms:ir.ui.view,arch_db:custom_contract.maintenance_contract_view_tree
+msgid "maintenance contract"
+msgstr "عقود الصيانه"
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.agreement_contract_report_temp
+msgid "اجمالي التكلفة"
+msgstr ""
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.agreement_contract_report_temp
+msgid ""
+"الاتفاق بين كل من :\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                <strong>الطرف الاول :</strong>"
+msgstr ""
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.maintenance_contract_report_temp
+msgid ""
+"الاتفاق بين كل من :\n"
+"                                <br/>\n"
+"                                <strong>الطرف الاول :</strong>\n"
+"                                <br/>\n"
+"                                مؤسسه"
+msgstr ""
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.agreement_contract_report_temp
+msgid "الاجمـــــــــــــــــــــــــــــــــــالي"
+msgstr ""
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.agreement_contract_report_temp
+msgid "البيان"
+msgstr ""
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.agreement_contract_report_temp
+#: model_terms:ir.ui.view,arch_db:custom_contract.maintenance_contract_report_temp
+msgid "التوقيع"
+msgstr ""
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.agreement_contract_report_temp
+#: model_terms:ir.ui.view,arch_db:custom_contract.maintenance_contract_report_temp
+msgid "الطرف الأول"
+msgstr ""
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.agreement_contract_report_temp
+#: model_terms:ir.ui.view,arch_db:custom_contract.maintenance_contract_report_temp
+msgid "الطرف الثاني"
+msgstr ""
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.agreement_contract_report_temp
+#: model_terms:ir.ui.view,arch_db:custom_contract.maintenance_contract_report_temp
+msgid "العدد"
+msgstr ""
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.maintenance_contract_report_temp
+msgid "الملاحظات"
+msgstr ""
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.agreement_contract_report_temp
+#: model_terms:ir.ui.view,arch_db:custom_contract.maintenance_contract_report_temp
+msgid "الموافق"
+msgstr ""
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.maintenance_contract_report_temp
+msgid "النوع"
+msgstr ""
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.agreement_contract_report_temp
+#: model_terms:ir.ui.view,arch_db:custom_contract.maintenance_contract_report_temp
+msgid "تم بعون من الله تعالي في يوم"
+msgstr ""
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.maintenance_contract_report_temp
+msgid ""
+"ريال ) سنويا\n"
+"                                <br/>\n"
+"                                <br/>"
+msgstr ""
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.agreement_contract_report_temp
+msgid "سعر الاجمالي"
+msgstr ""
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.agreement_contract_report_temp
+msgid "سعر الفرد"
+msgstr ""
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.agreement_contract_report_temp
+msgid "ضريبة القيمة المضافة 5%"
+msgstr ""
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.agreement_contract_report_temp
+msgid "عـقد اتفاق"
+msgstr ""
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.maintenance_contract_report_temp
+msgid "عقد صيانة أنظمة الحماية من الحريق والإنذار وملحقاتها"
+msgstr ""
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.maintenance_contract_report_temp
+msgid "غير موجود"
+msgstr ""
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.agreement_contract_report_temp
+msgid "قيمة هذه الاتفاقية ("
+msgstr ""
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.agreement_contract_report_temp
+msgid "مدة التنفيذ :"
+msgstr ""
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.maintenance_contract_report_temp
+msgid "موجود"
+msgstr ""
+
+#. module: custom_contract
+#: model_terms:ir.ui.view,arch_db:custom_contract.maintenance_contract_report_temp
+msgid "و عنوانها -"
+msgstr ""
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_system_type_value__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: custom_contract
+#: model:ir.model.fields,field_description:custom_contract.field_system_type_value__is_extinguishing
+msgid "Is Extinguishing ?"
+msgstr "هل هو نظام الإطفاء؟"
+
+#. module: custom_contract
+#: model:ir.ui.menu,name:custom_contract.menu_set_system_type_custom
+msgid "Maintenance System Type Extinguishing/Alarm"
+msgstr "انواع انظمة الاطفاء و الانذار"
+
+#. module: custom_contract
+#: model:ir.ui.menu,name:custom_contract.menu_maintenance_system_type_custom
+msgid "Contract Configuration"
+msgstr "إعدادات العقود"
+
+#. module: custom_contract
+#: model:ir.actions.act_window,name:custom_contract.maintenance_set_type_action
+msgid "Maintenance Set type"
+msgstr "ادخال انواع انظمة الاطفاء و الحرائق"

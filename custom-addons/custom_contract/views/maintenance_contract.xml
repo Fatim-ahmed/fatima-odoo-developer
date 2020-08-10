@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="contract_maintenance_view_form" model="ir.ui.view">
+            <field name="name">contract.maintenance.formq</field>
+            <field name="model">contract.maintenance</field>
+            <field name="arch" type="xml">
+                <form string="Contract Maintenance">
+                    <header>
+                        <!--                    <button string="Create Maintenance Contract" name="archive_equipment_request" type="object"/>-->
+                        <field name="state" widget="statusbar" options="{'clickable': '1'}"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <label for="num"/>
+                                <field placeholder="" attrs="{'required':False,'readonly':True}" name="num" class="oe_inline"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="contract_amount" required="1"/>
+                                <field name="visit_numb" required="1"/>
+                            </group>
+                            <group>
+                                <field name="date" required="1"/>
+                                <field name="end_date"/>
+                            </group>
+                        </group>
+                        <separator/>
+                        <separator/>
+                        <notebook>
+                            <page string="Party Information">
+                                <separator/>
+                                <separator/>
+                                <separator string="First Party Information"/>
+                                <group colspan="4" col="4">
+                                    <field name="first_party" required="1"/>
+                                    <field name="first_party_com_register"/>
+                                    <field name="first_party_phone"/>
+                                    <field name="first_party_executive_manager"/>
+                                    <field name="first_party_exec_mag_id"/>
+                                </group>
+                                <separator/>
+                                <separator/>
+                                <separator string="Second Party Information"/>
+                                <group colspan="4" col="4">
+                                    <field name="second_party" required="1"/>
+                                    <field name="second_party_com_register"/>
+                                    <field name="second_party_phone"/>
+                                    <field name="second_party_executive_manager"/>
+                                    <field name="second_party_exec_mag_id"/>
+                                </group>
+                            </page>
+                            <page string="Alarm System">
+                                <field name="alarm_line_ids" >
+                                    <tree string="Alarm System" editable="bottom">
+                                        <field name="name" required="1" optional="show" domain="[('is_extinguishing', '=', False)]" options="{'no_create': True, 'no_edit': True}"/>
+                                        <field name="is_available" optional="show"/>
+                                        <field name="not_available" optional="show"/>
+                                        <field name="count" optional="show"/>
+                                        <field name="note" optional="show"/>
+                                    </tree>
+                                </field>
+                                <separator/>
+                                <separator/>
+                                <group col="4" colspan="4">
+                                    <field name ='pumps'/>
+                                    <field name='fire_boxes'/>
+                                    <field name="fixed_automatic_systems"/>
+                                    <field name="fire_extinguishers"/>
+                                    <field name="internal_external_fire_socket_systems"/>
+                                    <field name="eq_co_con_fire_protect_sys"/>
+                                    <field name="fire_pump_board"/>
+                                </group>
+                            </page>
+                            <page string="Extinguishing System">
+                                <field name="extinguishing_line_ids" >
+                                    <tree string="Alarm System" editable="bottom">
+                                        <field name="name" required="1" optional="show" domain="[('is_extinguishing', '=', True)]" options="{'no_create': True, 'no_edit': True}"/>
+                                        <field name="is_available" optional="show"/>
+                                        <field name="not_available" optional="show"/>
+                                        <field name="count" optional="show"/>
+                                        <field name="note" optional="show"/>
+                                    </tree>
+                                </field>
+                                <separator/>
+                                <separator/>
+                                <group col="4" colspan="4">
+                                    <field name ='main_alarm_panel'/>
+                                    <field name='sign_board'/>
+                                    <field name="panel_help_signals"/>
+                                    <field name="fire_detectors"/>
+                                    <field name="signal_lamps_help"/>
+                                    <field name="call_points_hand"/>
+                                    <field name="audio_visual_alarms"/>
+                                    <field name="generator"/>
+                                    <field name="fire_chokes"/>
+                                    <field name="emergency_lighting"/>
+                                    <field name="air_fans_push_emergency_ladder"/>
+                                    <field name="basement_suction_fans"/>
+                                    <field name="electrical_wiring_network"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <!--                    <field name="activity_ids" widget="mail_activity"/>-->
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="maintenance_contract_view_tree" model="ir.ui.view">
+            <field name="name">maintenance.contract.tree</field>
+            <field name="model">contract.maintenance</field>
+            <field name="arch" type="xml">
+                <tree string="maintenance contract" multi_edit="1">
+                    <field name="name"/>
+                    <field name="date"/>
+                    <field name="first_party"/>
+                    <field name="second_party"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+        <record id="maintenance_contract_action" model="ir.actions.act_window">
+            <field name="name">Maintenance Contract</field>
+            <field name="res_model">contract.maintenance</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="maintenance_contract_view_tree"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Add a new Maintenance Contract
+                </p>
+            </field>
+        </record>
+
+        <!-- Menu items hierachy -->
+        <menuitem
+                id="menu_contract_maintenance_custom"
+                name="Maintenance Contract"
+                parent="menu_contract_parent_custom"
+                action="maintenance_contract_action"
+                sequence="0"/>
+
+        <!--config menu and action-->
+        <record id="maintenance_set_type_action" model="ir.actions.act_window">
+            <field name="name">Maintenance Set type</field>
+            <field name="res_model">system.type.value</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Add a new Maintenance System Type
+                </p>
+            </field>
+        </record>
+
+        <menuitem
+                id="menu_maintenance_system_type_custom"
+                name="Contract Configuration"
+                parent="menu_contract_parent_custom"
+                sequence="0"/>
+        <menuitem
+                id="menu_set_system_type_custom"
+                name="Maintenance System Type Extinguishing/Alarm"
+                parent="menu_maintenance_system_type_custom"
+                action="maintenance_set_type_action"
+                sequence="0"/>
+    </data>
+</odoo>

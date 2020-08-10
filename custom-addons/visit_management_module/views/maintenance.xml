@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="maintenance_management_view_form" model="ir.ui.view">
+            <field name="name">visit.management.form</field>
+            <field name="model">maintenance.management</field>
+            <field name="arch" type="xml">
+                <form string="Maintenance Management" create="false">
+                    <header>
+                        <button string="Create Sale Order" name="create_sale_order" type="object"/>
+                        <button string="Raise Complaint" name="action_raise_complaints" type="object"/>
+                        <!--                        <field name="state" widget="statusbar" options="{'clickable': '1'}"/>-->
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <label for="num"/>
+                                <field placeholder="" attrs="{'required':False,'readonly':True}" name="num" class="oe_inline"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="is_additional" invisible="1"/>
+                                <field name="contract_id" attrs="{'readonly':[('is_additional','=',False)]}"/>
+                                <field name="customer" attrs="{'readonly':[('is_additional','=',False)]}"/>
+                            </group>
+                            <group>
+                                <field name="date"/>
+                                <field name="responsible" attrs="{'readonly':[('is_additional','=',False)]}"/>
+                            </group>
+                        </group>
+                        <separator/>
+                        <separator/>
+                        <notebook>
+                            <page string="Alarm System">
+                                <field name="alarm_line_ids" >
+                                    <tree string="Alarm System" editable="bottom">
+                                        <field name="name" optional="show"/>
+                                        <field name="is_available" string ="Is Work" optional="show"/>
+                                        <field name="not_available" string="Is not work" optional="show"/>
+                                        <field name="count" optional="show"/>
+                                        <field name="note" optional="show"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Extinguishing System">
+                                <field name="extinguishing_line_ids" >
+                                    <tree string="Alarm System" editable="bottom">
+                                        <field name="name" optional="show"/>
+                                        <field name="is_available" string ="Is Work" optional="show"/>
+                                        <field name="not_available" string="Is not work" optional="show"/>
+                                        <field name="count" optional="show"/>
+                                        <field name="note" optional="show"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Other Information">
+                                <group>
+                                    <field name="note"/>
+                                </group>
+                                <group>
+                                    <group>
+                                        <field name="receiver_person"/>
+                                    </group>
+                                    <group>
+                                        <field name="signature"/>
+                                    </group>
+
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <!--                    <field name="activity_ids" widget="mail_activity"/>-->
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="maintenance_management_view_tree" model="ir.ui.view">
+            <field name="name">maintenance.custom.tree</field>
+            <field name="model">maintenance.management</field>
+            <field name="arch" type="xml">
+                <tree string="Maintenance Management" create="false">
+                    <field name="customer"/>
+                    <field name="contract_id"/>
+                    <field name="date"/>
+                    <!--                    <field name="state"/>-->
+                </tree>
+            </field>
+        </record>
+        <record id="additional_maintenance_management_view_tree" model="ir.ui.view">
+            <field name="model">maintenance.management</field>
+            <field name="inherit_id" ref="visit_management_module.maintenance_management_view_tree"/>
+            <field name="mode">primary</field>
+            <field name="arch" type="xml">
+                <xpath expr="//tree" position="attributes">
+                    <attribute name="create">true</attribute>
+                </xpath>
+            </field>
+        </record>
+        <!-- visit : actions -->
+        <record id="maintenance_action" model="ir.actions.act_window">
+            <field name="name">Maintenance</field>
+            <field name="res_model">maintenance.management</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="maintenance_management_view_tree"/>
+            <field name="domain">[('is_additional', '=', False)]</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Add a new visit
+                </p>
+            </field>
+        </record>
+
+        <record id="additional_maintenance_action" model="ir.actions.act_window">
+            <field name="name">Additional maintenance</field>
+            <field name="res_model">maintenance.management</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="additional_maintenance_management_view_tree"/>
+            <field name="domain">[('is_additional', '=', True)]</field>
+            <field name="context">{'default_is_additional': True}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Add a new Additional maintenance
+                </p>
+            </field>
+        </record>
+
+        <!-- Menu items hierachy -->
+        <menuitem
+                id="menu_maintenance_sub_parent_custom"
+                parent="menu_visit_parent_custom"
+                name="Maintenance Management"
+                sequence="111"/>
+        <menuitem
+                id="menu_maintenance_custom"
+                name="Maintenance"
+                parent="menu_maintenance_sub_parent_custom"
+                action="maintenance_action"
+                sequence="0"/>
+        <menuitem
+                id="menu_additional_maintenance_custom"
+                name="Additional Maintenance"
+                parent="menu_maintenance_sub_parent_custom"
+                action="additional_maintenance_action"
+                sequence="0"/>
+    </data>
+</odoo>

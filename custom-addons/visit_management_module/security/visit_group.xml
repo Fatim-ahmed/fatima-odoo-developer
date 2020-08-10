@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- This group is only allowed to deal with equipment registration and maintenance -->
+    <record model="ir.module.category" id="visit_custom">
+        <field name="name">Visit Management</field>
+        <field name="description">User access level for Visit module</field>
+        <field name="sequence">20</field>
+    </record>
+
+    <record id="group_visit_manager_custom" model="res.groups">
+        <field name="name">Visit Manager</field>
+        <field name="category_id" ref="visit_management_module.visit_custom"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        <field name="comment">The user will be able to manage visit.</field>
+    </record>
+
+    <record id="group_visit_user_custom" model="res.groups">
+        <field name="name">Visit User</field>
+        <field name="category_id" ref="visit_management_module.visit_custom"/>
+<!--        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>-->
+        <field name="comment">The user will be able to use visit.</field>
+    </record>
+
+
+</odoo>

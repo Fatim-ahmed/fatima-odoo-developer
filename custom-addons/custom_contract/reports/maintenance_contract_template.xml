@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="maintenance_contract_report_temp">
+            <t t-call="web.html_container">
+                <t t-call="custom_contract.custom_external_layout_standard">
+                    <t t-foreach="docs" t-as="o">
+                        <style type="text/css">
+                            @font-face {
+                            font-family: 'ae_AlMohanad';
+                            src: local('ae_AlMohanad'), local('ae_AlMohanad'),
+                            url('/custom_contract/static/fonts/ae_AlMohanad.ttf') format('truetype');
+                            }
+                            *{
+                            font-family: ae_AlMohanad;
+                            }
+                        </style>
+                        <div class="page" dir="rtl" style="text-align:right;margin-top:0px;font-size:14pt">
+                            <br/>
+                            <h4 style="text-align:center;margin-top:0px;font-weight:bold">عقد صيانة برقم <span t-esc="o.num"/> لأنظمة الحماية من الحريق والإنذار وملحقاتها
+                            </h4>
+                            <br/>
+                            <br/>
+                            <p  style="text-align:justify;margin: 10px;">
+                                تم بعون من الله تعالي في يوم <span t-esc="o.get_arabic_name_day(datetime.datetime.strptime(str(o.date), '%Y-%m-%d').strftime('%A'))"/> الموافق <span t-esc="o.date"/> الاتفاق بين كل من :
+                                <br/>
+                                <strong>الطرف الاول :</strong>
+                                <br/>
+                                مؤسسه <span t-esc="o.first_party.name"/> و عنوانها - <span t-esc="o.first_party.city"/> - طريق - <span t-esc="o.first_party.street"/> - هاتف - <span t-esc="o.first_party_phone"/> - رقم السجل التجاري - <span t-esc="o.first_party_com_register"/> - و يمثلها في هذا العقد السيد / <span t-esc="o.first_party_executive_manager"/> - رقم الهوية - <span t-esc="o.first_party_exec_mag_id"/>.
+                                <br/>
+                                <strong> الطرف الثاني : </strong>
+                                <br/>
+                                مؤسسه <span t-esc="o.second_party.name"/> و عنوانها - <span t-esc="o.second_party.city"/> - طريق - <span t-esc="o.second_party.street"/> - هاتف - <span t-esc="o.second_party_phone"/> - رقم السجل التجاري - <span t-esc="o.second_party_com_register"/> - و يمثلها في هذا العقد السيد / <span t-esc="o.second_party_executive_manager"/> - رقم الهوية - <span t-esc="o.second_party_exec_mag_id"/>.
+                                <br/>
+                                <br/>
+                                لما كان الطرف الثاني يرغب في إجراء عملية صيانة انظمة الحماية والانذار من الحريق وملحقاتها وما ابداه الطرف الاول من توفر الامكانيات من خلال مهندسين وفنيين اكفاء ومختصين في هذا المجال وذلك حسب الاصول الفنية المعتمد لذلك فقد تم الاتفاق بالتراضي بين الطرفين وهما بكامل الاهلية المعتبرة شرعاً للتعاقد حسب التالي :
+                                <br/>
+                                <br/>
+                                <strong>أولاً :  </strong>
+                                يعتبر التمهيد السابق جزء لا يتجزأ من هذا العقد .
+                                <br/>
+                                <br/>
+                                <strong>ثانياً :  </strong>
+                                والتزام الطرف الاول بعمل الصيانة والكشف الدوري لنظام الحريق والذي يشمل ( <span t-esc="o.get_alarm_text()"/> )
+                                وكذلك نظام الانذار الخاص بالحريق والذي يشمل (<span t-esc="o.get_extinguishing_text()"/> ) وجميع الانظمة الخاصة بهذا النظام والمتطلبات الخاصة بتشغيل النظام والتأكد من جاهزية جميع ما ورد
+                                <br/>
+                                <br/>
+                                <strong>ثالثاً :  </strong>
+                                يلتزم الطرف الأول بعمل جدول زيارات دورية على أن لا يقل عن ( 12 ) زيارة في السنة الواحدة بمعدل زيارة شهرياً وتسجيل نتائج الزيارة في سجل السلامة الخاص بالمنشأة وارفاق تقارير الصيانة بالسجل وتزويد الطرف الثاني بالتقرير .
+                                <br/>
+                                <br/>
+                                <strong>رابعاً :</strong>
+                                يلتزم الطرف الأول بالحضور أو من ينوب عنه من الفنيين في حالة حدوث عطل مفاجئ ولا تعتبر تلك زيارة وتسجل في سجل السلامة الخاص بالمنشأة .
+                                <br/>
+                                <br/>
+                                <strong> خامساً : </strong>
+                                على الطرف الأول والثاني اشعار الدفاع المدني رسمياً بأي خلل يؤثر على استمرارية عمل تلك الانظمة ويؤثر على سلامة الارواح والممتلكات بالمنشأة .
+                                <br/>
+                                <br/>
+                                <strong>سادساً : </strong>
+                                يجب على الطرف الذي يرغب بفسخ العقد اشعار الدفاع المدني رسمياً والطرف الاخر برغبته بفسخ العقد قبل شهر من الانتهاء مبدياً اسباب ذلك , وعلى الطرف الثاني احضار عقد صيانة جديد قبل 10 أيام من نهاية العقد السابق وتقديمه للدفاع المدني على أن يبدأ العقد الجديد مع نهاية العقد السابق .
+                                <br/>
+                                <br/>
+                                <strong>سابعاً :</strong>
+                                يعتبر العقد ساري المفعول في حالة انتهاء مدته مالم يتعارض مع الفقرة السابقة ملزم للطرفين .
+                                <br/>
+                                <br/>
+                                ثامناً : يلتزم الطرف الثاني بتأمين ما يلزم من قطع الغيار اللازمة للإصلاح فور طلبها منه وعلى الطرف الاول اشعار الدفاع المدني كتابياً عند عدم تأمينها خلال 48 ساعة من تاريخ ابلاغ الطرف الثاني .
+                                <br/>
+                                <br/>
+                                تاسعاً : يلتزم الطرف الثاني بتعبئة طفايات الحريق ونظام الاطفاء بالغازات بعد اعداد تقرير من قبل الطرف الاول بضرورة تعبئتها او استبدالها او الاتفاق مع الطرف الاول على تعبئتها وعلى الطرف الاول اشعار الدفع المدني كتابياً عند عدم تأمينها خلال 48 ساعة من تاريخ ابلاغ الطرف الثاني .
+                                <br/>
+                                <br/>
+                                عاشراً : في حالة تأخر الطرف الاول عن الصيانة على الطرف الثاني اشعار الدفاع المدني بذلك .
+                                <br/>
+                                <br/>
+                                الحادي عشر : يلتزم الطرف الثاني بالمحافظة على جميع الانظمة وعدم السماح بالعبث بها .
+                                <br/>
+                                <br/>
+                                الثاني عشر : بمجرد التوقيع على هذا العقد يعتبر الطرف الاول مسئولاً عن صيانة معدات الانذار والاطفاء بجميع الانظمة الواردة في الفقرةثانياً , وأي خلل أو عيب فيها تكون تحت مسئوليته .
+                                <br/>
+                                <br/>
+                                الثالث عشر : على الطرف الاول اتخاذ احتياطات الامن والسلامة اثناء العمل .
+                                <br/>
+                                <br/>
+                                الرابع عشر : يلتزم الطرف الاول بإحضار اجهزة الرفع أو النقل التي تتطلبها أعمال الصيانة .
+                                <br/>
+                                <br/>
+                                الخامس عشر : على الطرف الاول الالتزام بقوانين وانظمة المملكة العربية السعودية .
+                                <br/>
+                                <br/>
+                                السادس عشر : حرر هذا العقد بتاريخ ( <span t-esc="o.date"/> ) من نسختين واستلم كلاً من الطرفين النسخة الخاصة به من هذا العقد .
+                                <br/>
+                                <br/>
+                                السابع عشر : قيمة هذا العقد الاجمالية لمدة سنة هجرية هو مبلغ (<span t-esc="o.contract_amount"/>  ريال ) سنويا
+                                <br/>
+                                <br/>
+                            </p>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <strong>1) نظام الانذار
+                            </strong>
+                            <table style="width: 100%;margin-top:10px;" dir="rtl">
+                                <thead>
+                                    <tr>
+                                        <th style=" border: 1px solid black; padding: 1px; font-size:0.8em;background-color: #d3d3d3;color: black;text-align:center">
+                                            النوع
+                                        </th>
+                                        <th style=" border: 1px solid black; padding: 1px; font-size:0.8em;background-color: #d3d3d3;color: black;text-align:center">
+                                            موجود
+                                        </th>
+                                        <th style=" border: 1px solid black; padding: 1px;font-size:0.8em;background-color: #d3d3d3;color: black;text-align:center;">
+                                            غير موجود
+                                        </th>
+                                        <th style=" border: 1px solid black; padding: 1px;font-size:0.8em;background-color: #d3d3d3;color: black;text-align:center;">
+                                            العدد
+                                        </th>
+                                        <th style=" border: 1px solid black; padding: 1px;font-size:0.8em;background-color: #d3d3d3;color: black;text-align:center;">
+                                            الملاحظات
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="o.alarm_line_ids" t-as="docs">
+                                        <tr>
+                                            <td style=" border: 1px solid black;padding: 1px; padding-left: 1px;font-size:0.8em;background-color: white;color: black;text-align:center ">
+                                                <t t-esc="docs.name"/>
+                                            </td>
+                                            <td style=" border: 1px solid black;padding: 1px;font-size:0.8em;background-color: white;color: black;text-align:center;">
+                                                <t t-if="docs.is_available">
+                                                    <i class="fa fa-check" aria-hidden="true"/>
+                                                </t>
+                                            </td>
+                                            <td style=" border: 1px solid black;padding: 1px;font-size:0.8em;background-color: white;color: black;text-align:center;">
+                                                <t t-if="docs.not_available">
+                                                    <i class="fa fa-check" aria-hidden="true"/>
+                                                </t>
+                                            </td>
+                                            <td style="border: 1px solid black;padding: 1px;font-size:0.8em;background-color: white;color: black;text-align:center;">
+                                                <t t-esc="docs.count"/>
+                                            </td>
+                                            <td style=" border: 1px solid black;padding: 1px;font-size:0.8em;background-color: white;color: black;text-align:center;">
+                                                <t t-esc="docs.note"/>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+                            <br/>
+                            <br/>
+                            <strong>1) نظام الإطفاء
+                            </strong>
+                            <table style="width: 100%;margin-top:10px;" dir="rtl">
+                                <thead>
+                                    <tr>
+                                        <th style=" border: 1px solid black; padding: 1px; font-size:0.8em;background-color: #d3d3d3;color: black;text-align:center">
+                                            النوع
+                                        </th>
+                                        <th style=" border: 1px solid black; padding: 1px; font-size:0.8em;background-color: #d3d3d3;color: black;text-align:center">
+                                            موجود
+                                        </th>
+                                        <th style=" border: 1px solid black; padding: 1px;font-size:0.8em;background-color: #d3d3d3;color: black;text-align:center;">
+                                            غير موجود
+                                        </th>
+                                        <th style=" border: 1px solid black; padding: 1px;font-size:0.8em;background-color: #d3d3d3;color: black;text-align:center;">
+                                            العدد
+                                        </th>
+                                        <th style=" border: 1px solid black; padding: 1px;font-size:0.8em;background-color: #d3d3d3;color: black;text-align:center;">
+                                            الملاحظات
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="o.extinguishing_line_ids" t-as="docs">
+                                        <tr>
+                                            <td style=" border: 1px solid black;padding: 1px; padding-left: 1px;font-size:0.8em;background-color: white;color: black;text-align:center ">
+                                                <t t-esc="docs.name"/>
+                                            </td>
+                                            <td style=" border: 1px solid black;padding: 1px;font-size:0.8em;background-color: white;color: black;text-align:center;">
+                                                <t t-if="docs.is_available">
+                                                    <i class="fa fa-check" aria-hidden="true"/>
+                                                </t>
+                                            </td>
+                                            <td style=" border: 1px solid black;padding: 1px;font-size:0.8em;background-color: white;color: black;text-align:center;">
+                                                <t t-if="docs.not_available">
+                                                    <i class="fa fa-check" aria-hidden="true"/>
+                                                </t>
+                                            </td>
+                                            <td style="border: 1px solid black;padding: 1px;font-size:0.8em;background-color: white;color: black;text-align:center;">
+                                                <t t-esc="docs.count"/>
+                                            </td>
+                                            <td style=" border: 1px solid black;padding: 1px;font-size:0.8em;background-color: white;color: black;text-align:center;">
+                                                <t t-esc="docs.note"/>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+                            <br/>
+                            <br/>
+                            <table style="width: 100%;margin-top:10px;">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2" style=" border: 1px solid black; padding: 1px; font-size:0.8em;background-color: #d3d3d3;color: black;text-align:center">
+                                            الطرف الأول
+                                        </th>
+                                        <th colspan='2' style=" border: 1px solid black; padding: 1px; font-size:0.8em;background-color: #d3d3d3;color: black;text-align:center">
+                                            الطرف الثاني
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="2" style=" border: 1px solid black;padding: 1px; padding-left: 1px;font-size:0.8em;background-color: white;color: black;text-align:center ">
+                                            <t t-esc="o.first_party.name"/>
+                                        </td>
+                                        <td colspan="2" style="border: 1px solid black;padding: 1px;font-size:0.8em;background-color: white;color: black;text-align:center;">
+                                            <t t-esc="o.second_party.name"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=" border: 1px solid black;padding: 1px; padding-left: 1px;font-size:0.8em;background-color: white;color: black;text-align:center;width:15%">
+                                            التوقيع
+                                        </td>
+                                        <td style="border: 1px solid black;padding: 1px;font-size:0.8em;background-color: white;color: white;text-align:center;width:35%">.</td>
+                                        <td style="border: 1px solid black;padding: 1px;font-size:0.8em;background-color: white;color: black;text-align:center;width:15%">
+                                            التوقيع
+                                        </td>
+                                        <td style="border: 1px solid black;padding: 1px;font-size:0.8em;background-color: white;color: white;text-align:center;width:35%">
+                                            .</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+        <record model="report.paperformat" id="paperformat_m_contract_report">
+            <field name="name">paperformat.contract.report</field>
+            <field name="default" eval="True"/>
+            <field name="format">A4</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">10</field>
+            <field name="margin_right">10</field>
+            <field name="margin_bottom">30</field>
+            <field name="margin_left">10</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">10</field>
+            <field name="dpi">90</field>
+        </record>
+        <report id="report_maintenance_contract_report_temp"
+                model="contract.maintenance"
+                string="Maintenance Contract Report"
+                report_type="qweb-pdf"
+                print_report_name="'Contract Name- %s' % (object.name)"
+                name="custom_contract.maintenance_contract_report_temp"
+                paperformat="paperformat_m_contract_report"
+                menu="True"/>
+    </data>
+</odoo>

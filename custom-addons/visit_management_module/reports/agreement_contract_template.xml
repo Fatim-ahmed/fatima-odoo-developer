@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="custom_external_layout_standard">
+            <div class="header">
+            </div>
+            <div class="article o_report_layout_standard">
+                <t t-raw="0"/>
+            </div>
+        </template>
+
+        <template id="custom_external_layout">
+            <!-- Multicompany -->
+            <t t-if="not o and doc">
+                <t t-set="o" t-value="doc"/>
+            </t>
+
+            <t t-if="o and 'company_id' in o">
+                <t t-set="company" t-value="o.company_id.sudo()"/>
+            </t>
+            <t t-if="not o or not 'company_id' in o">
+                <t t-set="company" t-value="res_company"/>
+            </t>
+            <t t-if="company.external_report_layout == 'background'">
+                <t t-call="custom_contract.custom_external_layout_standard"><t t-raw="0"/></t>
+            </t>
+            <t t-if="company.external_report_layout == 'boxed'">
+                <t t-call="custom_contract.custom_external_layout_standard"><t t-raw="0"/></t>
+            </t>
+            <t t-if="company.external_report_layout == 'clean'">
+                <t t-call="custom_contract.custom_external_layout_standard"><t t-raw="0"/></t>
+            </t>
+            <t t-if="company.external_report_layout in (False, 'standard')">
+                <t t-call="custom_contract.custom_external_layout_standard"><t t-raw="0"/></t>
+            </t>
+        </template>
+        <template id="agreement_contract_report_temp">
+            <t t-call="web.html_container">
+                <t t-call="custom_contract.custom_external_layout_standard">
+                    <t t-foreach="docs" t-as="o">
+                        <style type="text/css">
+                            @font-face {
+                            font-family: 'ae_AlMohanad';
+                            src: local('ae_AlMohanad'), local('ae_AlMohanad'),
+                            url('/custom_contract/static/fonts/ae_AlMohanad.ttf') format('truetype');
+                            }
+                            *{
+                            font-family: ae_AlMohanad;
+                            }
+                        </style>
+                        <div class="page" dir="rtl" style="text-align:right;margin-top:0px;font-size:14pt">
+                            <br/>
+                            <br/>
+                            <h4 style="text-align:center;margin-top:0px;font-weight:bold">عقد اتفاق برقم<span t-esc="o.num"/>
+                            </h4>
+                            <br/>
+                            <br/>
+                            <p>  تم بعون من الله تعالي في يوم <span t-esc="o.get_arabic_name_day(datetime.datetime.strptime(str(o.date), '%Y-%m-%d').strftime('%A'))"/> الموافق <span t-esc="o.date"/> الاتفاق بين كل من :
+                                <br/>
+                                <br/>
+                                <strong>الطرف الاول :</strong> <span t-esc="o.first_party.name"/>
+                                <br/>
+                                <br/>
+                                <strong> الطرف الثاني : </strong>  <span t-esc="o.second_party.name"/>
+                                <br/>
+                                <br/>
+                                <strong>هذا وقد  اتفق الطرفان وهما بكامل الأوصاف المعتبرة شرعا ونظاما على إبرام هذا العقد وذلك وفقا للأحكام والشروط التالية :</strong>
+                            </p>
+                            <table style="width: 100%;margin-top:10px;" dir="rtl">
+                                <thead>
+                                    <tr>
+                                        <th style=" border: 1px solid black; padding: 1px; font-size:0.8em;background-color: #d3d3d3;color: black;text-align:center;width:5%">
+                                            م
+                                        </th>
+                                        <th style=" border: 1px solid black; padding: 1px; font-size:0.8em;background-color: #d3d3d3;color: black;text-align:center">
+                                            البيان
+                                        </th>
+                                        <th style=" border: 1px solid black; padding: 1px;font-size:0.8em;background-color: #d3d3d3;color: black;text-align:center;">
+                                            العدد
+                                        </th>
+                                        <th style=" border: 1px solid black; padding: 1px;font-size:0.8em;background-color: #d3d3d3;color: black;text-align:center;">
+                                            سعر الفرد
+                                        </th>
+                                        <th style=" border: 1px solid black; padding: 1px;font-size:0.8em;background-color: #d3d3d3;color: black;text-align:center;">
+                                            سعر الاجمالي
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-set="i" t-value="1"/>
+                                    <t t-foreach="o.line_ids" t-as="docs">
+                                        <tr>
+                                            <td style=" border: 1px solid black;padding: 1px; padding-left: 1px;font-size:0.8em;background-color: white;color: black;text-align:center ">
+                                                <t t-esc="i"/>
+                                            </td>
+                                            <td style=" border: 1px solid black;padding: 1px;font-size:0.8em;background-color: white;color: black;text-align:center;">
+                                                <t t-esc="docs.name"/>
+                                            </td>
+                                            <td style=" border: 1px solid black;padding: 1px;font-size:0.8em;background-color: white;color: black;text-align:center;">
+                                                <t t-esc="docs.product_uom_qty"/>
+                                            </td>
+                                            <td style="border: 1px solid black;padding: 1px;font-size:0.8em;background-color: white;color: black;text-align:center;">
+                                                <t t-esc="docs.price_unit"/>
+                                            </td>
+                                            <td style=" border: 1px solid black;padding: 1px;font-size:0.8em;background-color: white;color: black;text-align:center;">
+                                                <t t-esc="docs.price_subtotal"/>
+                                            </td>
+                                        </tr>
+                                        <t t-set="i" t-value="i+1"/>
+                                    </t>
+                                    <tr>
+                                        <td colspan="4" style=" border: 1px solid black;padding: 1px; padding-left: 1px;font-size:0.8em;background-color: white;color: black;text-align:center ">
+                                            الاجمـــــــــــــــــــــــــــــــــــالي
+                                        </td>
+                                        <td colspan="4" style=" border: 1px solid black;padding: 1px; padding-left: 1px;font-size:0.8em;background-color: white;color: black;text-align:center ">
+                                            <t t-esc="o.amount_untaxed"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" style=" border: 1px solid black;padding: 1px; padding-left: 1px;font-size:0.8em;background-color: white;color: black;text-align:center ">
+                                            ضريبة القيمة المضافة 5%
+                                        </td>
+                                        <td colspan="4" style=" border: 1px solid black;padding: 1px; padding-left: 1px;font-size:0.8em;background-color: white;color: black;text-align:center ">
+                                            <t t-esc="o.amount_tax"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" style=" border: 1px solid black;padding: 1px; padding-left: 1px;font-size:0.8em;background-color: white;color: black;text-align:center ">
+                                            اجمالي التكلفة
+                                        </td>
+                                        <td colspan="4" style=" border: 1px solid black;padding: 1px; padding-left: 1px;font-size:0.8em;background-color: white;color: black;text-align:center ">
+                                            <t t-esc="o.amount_total"/>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br/>
+                            <br/>
+                            <p>
+                                قيمة هذه الاتفاقية (  <t t-esc="o.amount_total"/>) ريال يتم دفعها على حسب الطريق التالية:
+                            </p>
+                            <table style="width: 70%;">
+                                <t t-foreach="o.installment_ids" t-as="docs">
+                                    <tr>
+                                        <td style=" border: 0px solid white;padding: 1px;background-color: white;color: black;text-align:center;width:5%;font-weight:bold">
+                                            *
+                                        </td>
+                                        <td style=" border: 0px solid white;padding: 1px;background-color: white;color: black;text-align:center;width:20%;font-weight:bold">
+                                            <t t-esc="docs.name"/>
+                                        </td>
+                                        <td style=" border: 0px solid white;padding: 1px;background-color: white;color: black;text-align:right;width:55%">
+                                            <t t-esc="docs.description"/>
+                                        </td>
+                                        <td style=" border: 0px solid white;padding: 1px;background-color: white;color: black;text-align:center;width:20%">
+                                            <t t-esc="docs.amount"/>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </table>
+                            <br/>
+                            <br/>
+                            <p>
+                                مدة التنفيذ :
+                            </p>
+                            <p>
+                                <t t-raw="o.duration"/>
+                            </p>
+                            <p>
+                                <t t-raw="o.note"/>
+                            </p>
+                            <br/>
+                            <table style="width: 100%;margin-top:10px;">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2" style=" border: 1px solid black; padding: 1px; font-size:0.8em;background-color: #d3d3d3;color: black;text-align:center">
+                                            الطرف الأول
+                                        </th>
+                                        <th colspan='2' style=" border: 1px solid black; padding: 1px; font-size:0.8em;background-color: #d3d3d3;color: black;text-align:center">
+                                            الطرف الثاني
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="2" style=" border: 1px solid black;padding: 1px; padding-left: 1px;font-size:0.8em;background-color: white;color: black;text-align:center ">
+                                            <t t-esc="o.first_party.name"/>
+                                        </td>
+                                        <td colspan="2" style="border: 1px solid black;padding: 1px;font-size:0.8em;background-color: white;color: black;text-align:center;">
+                                            <t t-esc="o.second_party.name"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style=" border: 1px solid black;padding: 1px; padding-left: 1px;font-size:0.8em;background-color: white;color: black;text-align:center;width:15%">
+                                            التوقيع
+                                        </td>
+                                        <td style="border: 1px solid black;padding: 1px;font-size:0.8em;background-color: white;color: white;text-align:center;width:35%">.</td>
+                                        <td style="border: 1px solid black;padding: 1px;font-size:0.8em;background-color: white;color: black;text-align:center;width:15%">
+                                            التوقيع
+                                        </td>
+                                        <td style="border: 1px solid black;padding: 1px;font-size:0.8em;background-color: white;color: white;text-align:center;width:35%">
+                                            .</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+        <record model="report.paperformat" id="paperformat_contract_report">
+            <field name="name">paperformat.contract.report</field>
+            <field name="default" eval="True"/>
+            <field name="format">A4</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">10</field>
+            <field name="margin_right">20</field>
+            <field name="margin_bottom">10</field>
+            <field name="margin_left">20</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">10</field>
+            <field name="dpi">90</field>
+        </record>
+        <report id="report_agreement_contract_report_temp"
+                model="contract.agreement"
+                string="Agreement Contract Report"
+                report_type="qweb-pdf"
+                print_report_name="'Contract Name- %s' % (object.name)"
+                name="custom_contract.agreement_contract_report_temp"
+                paperformat="paperformat_contract_report"
+                menu="True"/>
+    </data>
+</odoo>

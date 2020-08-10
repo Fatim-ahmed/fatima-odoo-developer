@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="demo_panel_zeta" model="system.type.value">
+            <field name="name">لوحة تحكم زيتا</field>
+            <field name="is_extinguishing">False</field>
+        </record>
+        <record id="demo_discover_dokhan" model="system.type.value">
+            <field name="name">كاشف دخان</field>
+            <field name="is_extinguishing">False</field>
+        </record>
+        <record id="demo_kaser_zogag" model="system.type.value">
+            <field name="name">كاسر زجاج</field>
+            <field name="is_extinguishing">False</field>
+        </record>
+        <record id="demo_garse_alram" model="system.type.value">
+            <field name="name">جرس انذار</field>
+            <field name="is_extinguishing">False</field>
+        </record>
+        <record id="demo_panel_exite" model="system.type.value">
+            <field name="name">لوحة مخرج طواري</field>
+            <field name="is_extinguishing">False</field>
+        </record>
+        <record id="demo_fire_box" model="system.type.value">
+            <field name="name">صندوق حريق</field>
+            <field name="is_extinguishing">True</field>
+        </record>
+        <record id="demo_rashash" model="system.type.value">
+            <field name="name">رشاش</field>
+            <field name="is_extinguishing">True</field>
+        </record>
+        <record id="demo_pumbs" model="system.type.value">
+            <field name="name">مضخة</field>
+            <field name="is_extinguishing">True</field>
+        </record>
+        <record id="demo_system_co" model="system.type.value">
+            <field name="name">نظام CO2</field>
+            <field name="is_extinguishing">True</field>
+        </record>
+    </data>
+</odoo>

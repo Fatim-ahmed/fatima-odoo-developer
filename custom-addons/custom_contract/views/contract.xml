@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="contract_agreement_view_form" model="ir.ui.view">
+            <field name="name">contract.agreement.formq</field>
+            <field name="model">contract.agreement</field>
+            <field name="arch" type="xml">
+                <form string="Contract Agreement">
+                    <header>
+                        <button string="Create Maintenance Contract" name="create_maintenance_contract" type="object"/>
+                        <field name="state" widget="statusbar" options="{'clickable': '1'}"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <label for="num"/>
+                                <field placeholder="" attrs="{'required':False,'readonly':True}" name="num" class="oe_inline"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                            </group>
+                            <group>
+                                <field name="date" required="1"/>
+                                <field name="currency_id" invisible="1"/>
+                            </group>
+                        </group>
+                        <separator/>
+                        <separator/>
+                        <notebook>
+                            <page string="Party Information">
+                                <separator/>
+                                <separator/>
+                                <separator string="First Party Information"/>
+                                <group colspan="4" col="4">
+                                    <field name="first_party" required="1"/>
+                                    <field name="first_party_com_register"/>
+                                    <field name="first_party_phone"/>
+                                    <field name="first_party_executive_manager"/>
+                                    <field name="first_party_exec_mag_id"/>
+                                </group>
+                                <separator/>
+                                <separator/>
+                                <separator string="Second Party Information"/>
+                                <group colspan="4" col="4">
+                                    <field name="second_party" required="1"/>
+                                    <field name="second_party_com_register"/>
+                                    <field name="second_party_phone"/>
+                                    <field name="second_party_executive_manager"/>
+                                    <field name="second_party_exec_mag_id"/>
+                                </group>
+                            </page>
+                            <page string="Order Information">
+                                <group>
+                                    <field name="order_id" options="{'no_create': True, 'no_open': True}"/>
+                                </group>
+                                <separator string="Order Line"/>
+                                <field name="line_ids">
+                                    <tree string="Order lines" editable="bottom">
+                                        <!--                                    <field name="product_id"/>-->
+                                        <field name="name" optional="show"/>
+                                        <field name="product_uom_qty" optional="show"/>
+                                        <field name="price_unit" optional="show"/>
+                                        <field name="price_subtotal" optional="show"/>
+                                    </tree>
+                                </field>
+                                <group name="note_group" col="6">
+                                    <group class="oe_subtotal_footer oe_right" colspan="2" name="sale_total">
+                                        <field name="amount_untaxed" widget='monetary' options="{'currency_field': 'currency_id'}"/>
+                                        <field name="amount_tax" widget='monetary' options="{'currency_field': 'currency_id'}"/>
+                                        <div class="oe_subtotal_footer_separator oe_inline o_td_label">
+                                            <label for="amount_total" />
+                                        </div>
+                                        <field name="amount_total" nolabel="1" class="oe_subtotal_footer_separator" widget='monetary' options="{'currency_field': 'currency_id'}"/>
+                                    </group>
+                                    <div class="oe_clear"/>
+                                </group>
+                            </page>
+                            <page string="Installments">
+                                <field name="installment_ids" >
+                                    <tree string="Installments" editable="bottom">
+                                        <field name="name" optional="show" required="1"/>
+                                        <field name="description" optional="show" required="1"/>
+                                        <field name="amount" optional="show" required="1"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Other Information">
+                                <group>
+                                    <field name="duration"/>
+                                </group>
+                                <group>
+                                    <field name="note"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <!--                    <field name="activity_ids" widget="mail_activity"/>-->
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="agreement_contract_view_tree" model="ir.ui.view">
+            <field name="name">agreement.contract.tree</field>
+            <field name="model">contract.agreement</field>
+            <field name="arch" type="xml">
+                <tree string="Agreement contract" multi_edit="1">
+                    <field name="name"/>
+                    <field name="date"/>
+                    <field name="first_party"/>
+                    <field name="second_party"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+        <!-- equiment.request : actions -->
+        <record id="agreement_contract_action" model="ir.actions.act_window">
+            <field name="name">Agreement Contract</field>
+            <field name="res_model">contract.agreement</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="agreement_contract_view_tree"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Add a new agreement Contract
+                </p>
+            </field>
+        </record>
+
+        <!-- Menu items hierachy -->
+        <menuitem
+                id="menu_contract_parent_custom"
+                name="Contract"
+                sequence="110"/>
+        <menuitem
+                id="menu_contract_agreement_custom"
+                name="Agreement Contract"
+                parent="menu_contract_parent_custom"
+                action="agreement_contract_action"
+                sequence="0"/>
+    </data>
+</odoo>

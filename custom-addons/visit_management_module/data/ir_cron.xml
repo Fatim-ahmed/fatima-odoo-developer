@@ -1,0 +1,15 @@
+<odoo>
+    <data>
+        <record model="ir.cron" id="delay_visit_corn">
+            <field name="name">delay visit</field>
+            <field name="active">True</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field name="model_id" ref="model_visit_management" />
+            <field name="state">code</field>
+            <field name="code">model.action_delay_visit()</field>
+        </record>
+    </data>
+</odoo>

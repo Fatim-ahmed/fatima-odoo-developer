@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="complaints_common_view_form" model="ir.ui.view">
+            <field name="name">common.complaints.form</field>
+            <field name="model">raise.complaints</field>
+            <field name="arch" type="xml">
+                <form string="Complaints">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <label for="num"/>
+                                <field placeholder="" attrs="{'required':False,'readonly':True}" name="num" class="oe_inline"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="type" invisible="1"/>
+                                <field name="customer"/>
+                                <field name="maintenance_id" attrs="{'invisible':[('type','=','visit')]}"/>
+                                <field name="visit_id" attrs="{'invisible':[('type','=','maintenance')]}"/>
+                                <field name="complaint" widget="radio"/>
+                            </group>
+                            <group>
+                                <field name="date"/>
+                                <field name="responsible"/>
+                                <field name="other" attrs="{'invisible':[('complaint','!=','other')]}"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="common_complaints_view_tree" model="ir.ui.view">
+            <field name="name">complaints.tree</field>
+            <field name="model">raise.complaints</field>
+            <field name="arch" type="xml">
+                <tree string="Complaints" multi_edit="1">
+                    <field name="customer"/>
+                    <field name="date"/>
+                    <field name="responsible"/>
+                </tree>
+            </field>
+        </record>
+        <!-- visit : actions -->
+        <record id="visit_complaints_action" model="ir.actions.act_window">
+            <field name="name">visit Complaints</field>
+            <field name="res_model">raise.complaints</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="common_complaints_view_tree"/>
+            <field name="domain">[('type', '=', 'visit')]</field>
+            <field name="context">{'default_type': 'visit'}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Add a new visit Complaints
+                </p>
+            </field>
+        </record>
+
+        <record id="maintenance_complaints_action" model="ir.actions.act_window">
+            <field name="name">Maintenance Complaints</field>
+            <field name="res_model">raise.complaints</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="common_complaints_view_tree"/>
+            <field name="domain">[('type', '=', 'maintenance')]</field>
+            <field name="context">{'default_type': 'maintenance'}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Add a new Complaints
+                </p>
+            </field>
+        </record>
+
+        <!-- Menu items hierachy -->
+        <menuitem
+                id="menu_complaints_sub_parent_custom"
+                parent="menu_visit_parent_custom"
+                name="Complaints Management"
+                sequence="113"/>
+        <menuitem
+                id="menu_visit_complaints_custom"
+                name="Visit Complaints"
+                parent="menu_complaints_sub_parent_custom"
+                action="visit_complaints_action"
+                sequence="0"/>
+        <menuitem
+                id="menu_maintenance_complaints_custom"
+                name="Maintenance Complaints"
+                parent="menu_complaints_sub_parent_custom"
+                action="maintenance_complaints_action"
+                sequence="0"/>
+    </data>
+</odoo>
